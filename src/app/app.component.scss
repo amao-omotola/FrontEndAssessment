@@ -1,0 +1,46 @@
+@import '../styles.scss';
+
+nav{
+    height: 10%;
+    padding: 3% 2%;
+    // background-color: #e3dfdf;
+    .logo{
+        width: 20%;
+        img{
+            width: 20%;
+        }
+    }
+    .spacer {
+        flex: 1 1 auto;
+      }
+    .nav-items{
+        .nav-item{
+            padding: 2%;
+            button{
+                width: 7vw;
+            }
+            .signUp-btn{
+                background-color: $deepBlue;
+                color: #ffffff;
+            }
+        }
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .logo{
+      width: 40%;
+      img{
+        width: 25%;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .logo{
+      width: 40% !important;
+      img{
+        width: 25% !important;
+      }
+    }
+  }
+
