@@ -36,7 +36,6 @@ export class SignUpComponent {
   submit(){
     this.spinner = true;
     this.sendBtn = true;
-    console.log(this.signUpForm.value);
     
     this.registerService.signUp(this.signUpForm.value).subscribe(
       {

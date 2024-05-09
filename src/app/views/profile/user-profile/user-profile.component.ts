@@ -34,7 +34,6 @@ export class UserProfileComponent implements OnInit{
   getUser(){
     this.profileService.getUser(2).subscribe({
       next:(res:any)=>{ 
-        console.log(res);
         this.userInfo = res.data
         this.profileForm.patchValue({
           last_name: this.userInfo.last_name,
@@ -60,7 +59,6 @@ export class UserProfileComponent implements OnInit{
       let name= this.profileForm.value.first_name;
       this.profileService.updateUser(2, name).subscribe({
         next:(res:any)=>{ 
-          console.log(res);
           this.userInfo = res.data
           this.spinner=false;
           this.toaster.showSuccess('Profile Updated Successfully');

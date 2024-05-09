@@ -12,7 +12,6 @@ import { NotificationService } from '../../../shared/notification.service';
 })
 export class UserManagementComponent  implements OnInit{
   dataSource= new MatTableDataSource<any> as unknown as CdkTableDataSourceInput<any>
-  // dataSource: MatTableDataSource<any> | null = null;
   displayedColumns: string[] = ['email', 'first_name', 'last_name', 'avatar'];
   currentPage: number = 0;
   pageSize: number = 10;

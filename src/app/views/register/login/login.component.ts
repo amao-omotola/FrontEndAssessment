@@ -37,7 +37,6 @@ export class LoginComponent {
   ){}
 
   submit(){
-    console.log(this.loginForm.value);
     
     this.spinner = true;
     this.sendBtn = true;

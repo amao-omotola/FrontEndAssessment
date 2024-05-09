@@ -5,10 +5,6 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ProfileComponent } from './profile.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: ProfileComponent
-  // },
   {
     path: 'users',
     component: UserManagementComponent

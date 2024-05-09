@@ -1,6 +1,5 @@
 @import '../../../styles.scss';
 mat-drawer {
-    // min-width: 200px;
     min-width: 8%;
   }
   
@@ -9,7 +8,6 @@ mat-drawer {
   }
   
   mat-drawer-container  {
-    // min-height: calc( 100vh - 64px );
     min-height: 88%;
   }
   
@@ -86,17 +84,12 @@ mat-drawer {
     border-left: 4px solid $mediumBlue;
   }
 .side-item{
-    // margin: 5% 0;
     height: 70% !important;
     display: flex;
     justify-content: center;
   }
   .side-item:hover{
     cursor: grab;
-  }
-  .page-title{
-    // font-size: 70%;
-    // color: ;
   }
   .menu-item:hover{
     cursor: grab;
@@ -108,9 +101,7 @@ mat-drawer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    mat-icon{
-      // font-size: 100%;
-    }
+    
   }
   mat-drawer{
       background-color: #ffffff;
