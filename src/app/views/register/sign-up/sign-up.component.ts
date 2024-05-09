@@ -6,6 +6,7 @@ import {FormControl, Validators, FormsModule, ReactiveFormsModule, FormGroup} fr
 import { CompleteMaterialModule } from '../../../shared/angular-material-module';
 import { NotificationService } from '../../../shared/notification.service';
 import { RegisterService } from '../../../services/auth/register.service';
+import { NavbarComponent } from '../../sharedComponents/navbar/navbar.component';
 @Component({
   selector: 'app-sign-up',
   standalone: true,
@@ -15,6 +16,7 @@ import { RegisterService } from '../../../services/auth/register.service';
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
+    NavbarComponent,
   ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss'

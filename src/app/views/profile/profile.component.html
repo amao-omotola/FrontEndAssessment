@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="opened">
+        <mat-list>
+            <!-- <ng-container> -->
+              <ng-container>
+                <mat-list-item class="side-item"
+                  routerLink="/profile/users"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                >
+                  
+                  <div mat-line class="menu-item">
+                    <div>
+                      <mat-icon mat-list-icon class="side-icon">
+                        supervisor_account
+                      </mat-icon>
+                    </div>
+                    
+                   <div class="page-title">
+                    User mgt.
+                   </div>
+                  </div>
+                </mat-list-item>
+                <mat-list-item
+                  class="side-item"
+                  routerLink="/profile/userprofile"
+                  routerLinkActive="active"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                >
+                  
+                <div mat-line class="menu-item">
+                  <div>
+                    <mat-icon mat-list-icon class="side-icon">
+                        account_circle
+                    </mat-icon>
+                  </div>
+                 <div class="page-title">
+                  Profile
+                 </div></div>
+                </mat-list-item>
+                
+                
+              </ng-container>
+            <!-- </ng-container> -->
+          </mat-list>
+    </mat-drawer>
+
+    <mat-drawer-content [class.margin-left]="opened">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>

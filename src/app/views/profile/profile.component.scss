@@ -1,0 +1,117 @@
+@import '../../../styles.scss';
+mat-drawer {
+    // min-width: 200px;
+    min-width: 8%;
+  }
+  
+  .margin-left {
+    margin-left: 300px;
+  }
+  
+  mat-drawer-container  {
+    // min-height: calc( 100vh - 64px );
+    min-height: 88%;
+  }
+  
+  ::ng-deep .mat-drawer-inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+  }
+  
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  
+  .date-hour-content {
+    background: #3f51b538;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .mat-expansion-panel {
+    box-shadow: none;
+    background: transparent;
+  }
+  
+  .mat-expansion-panel-header {
+    padding: 0 16px;
+  }
+  
+  .mat-expansion-panel-header-title,
+  .mat-expansion-panel-header-description {
+    align-items: center;
+  }
+  
+  .mat-list-icon {
+    padding: 4px;
+  }
+  
+  .mat-list-item {
+    cursor: pointer;
+    border-left: 4px solid transparent;
+    transition: 0.2s all;
+  
+    box-sizing: border-box;
+  }
+  
+  .mat-list-item:hover {
+    background: rgba(0, 0, 0, 0.04);
+  }
+  
+  .mat-list-base {
+    padding-top: 0;
+  }
+  
+  .mat-list-base .mat-list-item {
+    height: 50px;
+  }
+  
+  .list-item {
+    font-size: 16px;
+    padding-left: 16px;
+  }
+  
+  .mat-line {
+    white-space: normal !important;
+  }
+  
+  .active {
+    background: #3fe46b33 !important;
+    border-left: 4px solid $mediumBlue;
+  }
+.side-item{
+    // margin: 5% 0;
+    height: 70% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .side-item:hover{
+    cursor: grab;
+  }
+  .page-title{
+    // font-size: 70%;
+    // color: ;
+  }
+  .menu-item:hover{
+    cursor: grab;
+  }
+  .menu-item{
+    color: $deeperBlue;
+    font-size: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    mat-icon{
+      // font-size: 100%;
+    }
+  }
+  mat-drawer{
+      background-color: #ffffff;
+  }
