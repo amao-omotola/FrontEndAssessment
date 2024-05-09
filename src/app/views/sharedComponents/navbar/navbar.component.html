@@ -11,13 +11,13 @@
       <div class="collapse navbar-collapse justify-content-end" [ngClass]="{ 'show': isNavbarCollapsed }">
         <ul class="navbar-nav nav-items">
           <li class="nav-item">
-            <button mat-button class="nav-button login-btn" routerLink="/login">
+            <button mat-button class="nav-button login-btn" routerLink="/login" (click)="clearToken()">
               Login
             </button>
           </li>
           <li class="nav-item">
             <button mat-button class="nav-item nav-button signUp-btn"
-            routerLink="/signUp">
+            routerLink="/signUp" (click)="clearToken()">
             Sign up
           </button>
           </li>

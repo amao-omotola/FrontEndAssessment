@@ -1,0 +1,27 @@
+@import '../../../../styles.scss';
+mat-card{
+    margin: 5%;
+    .body-container{
+        display: flex;
+            flex-direction: row; 
+            align-items: center;
+            justify-content: center;
+            // flex-direction: column;
+            // text-align: center;
+        .image-container{
+            margin: 6% 0;
+            display: flex;
+            justify-content: center;
+            img{
+                border-radius: 50%;
+            }
+        }
+    }
+    mat-card-actions{
+        button{
+            background-color: $deeperBlue;
+            color: white;
+            width: 30%
+        }
+    }
+}

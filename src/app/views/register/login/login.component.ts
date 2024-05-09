@@ -23,14 +23,43 @@ import { NavbarComponent } from '../../sharedComponents/navbar/navbar.component'
 })
 export class LoginComponent {
   loginForm = new FormGroup ({
-    login : new FormControl('', [Validators.required, Validators.email]),
+    email : new FormControl('', [Validators.required, Validators.email]),
       password : new FormControl('', [Validators.required,]),
   })
   hide = true;
   spinner= false;
+  sendBtn= false;
+
+  constructor(
+    private registerService: RegisterService,
+    private token: NotificationService,
+    private route: Router,
+  ){}
 
   submit(){
+    console.log(this.loginForm.value);
+    
+    this.spinner = true;
+    this.sendBtn = true;
+    
+    this.registerService.login(this.loginForm.value).subscribe(
+      {
+        next:(res: any) =>{
+          this.spinner = false;
+          this.token.showSuccess('Login Successfully');
+          this.sendBtn = false;
+          this.route.navigate(['/profile/users'])
+        },
+        error: (err: any)=> {
+          
+          this.spinner = false;
+          this.sendBtn = false;
+          this.token.showError(err)
 
+        }
+    }
+    
+  )
   }
 
   hidePassword(){
@@ -39,5 +68,8 @@ export class LoginComponent {
     } else{
       this.hide= true
     }
+  }
+  get f(){
+    return this.loginForm.controls;
   }
 }
