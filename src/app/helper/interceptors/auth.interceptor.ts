@@ -10,9 +10,8 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
   // let token:any = TokenService
 
   let token:any = inject(TokenService);
-    let user: any = inject(TokenService);
     
-    let isLoggedIn = user.getUserInfo() && token.getToken();
+    let isLoggedIn = token.getToken();
     const isApiUrl = req.url.startsWith(environment.apiBaseUrl);
     if (isLoggedIn && isApiUrl) {
       req = req.clone({

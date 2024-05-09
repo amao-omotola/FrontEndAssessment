@@ -1,1 +1,64 @@
-<p>sign-up works!</p>
+<app-navbar></app-navbar>
+<div class="signUp-body">
+    <mat-card>
+        <div class="content">
+          <mat-card-header>
+            <mat-card-title>Sign Up</mat-card-title>
+        </mat-card-header>
+              <form [formGroup]="signUpForm">
+                <mat-card-content>
+                    <mat-form-field class="example-form-field">
+                          <mat-icon matPrefix>mail</mat-icon>
+                          <mat-label>Email</mat-label>
+                          <input matInput type="text" formControlName="email">
+                      </mat-form-field>
+                      <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['email'].errors?.['required']">email is required.</div>
+                        <div *ngIf="f['email'].errors?.['email']">email is not valid.</div>
+                      </div>
+                      <mat-form-field class="example-form-field">
+                        <mat-icon matPrefix>lock</mat-icon>
+                          <mat-label>Password</mat-label>
+                          <input matInput type="password" 
+                            formControlName="password"
+                          [type]="hide ? 'password' : 'text'">
+                          <mat-icon matSuffix id="eye" (click)="hidePassword()">
+                              {{hide ? 'visibility_off' : 'visibility'}}
+                          </mat-icon>
+                      </mat-form-field>
+                      <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['password'].errors?.['password']">password is required.</div>
+                      </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                  <button mat-raised-button class="send-btn"
+                  [disabled]="sendBtn"
+                  (click)="submit()" 
+                  >Submit
+                  <mat-spinner [diameter]="40"
+                      *ngIf="spinner"
+                  color="primary"
+                  style="float: right; height: 15px; width: 15px"></mat-spinner>
+                </button>
+                <br></mat-card-actions> 
+                <div class="other-buttons">
+                  <!-- <div>
+                    <button mat-button
+                    routerLink="/register/forgot-password"
+                    style="float: right">
+                    Forgot Password</button>
+                  </div> -->
+                  <div>
+                    <button mat-button
+                    routerLink="/register/signUp"
+                    >
+                    Login</button>
+                  </div>
+                </div>
+                     
+              </form>
+              
+        </div>
+        
+    </mat-card>
+</div>

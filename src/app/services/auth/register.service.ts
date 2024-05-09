@@ -18,12 +18,12 @@ export class RegisterService {
 
   signUp(signUpForm:any){
     return this.http
-    .post<any>(`${api}registration/`, signUpForm)
+    .post<any>(`${api}api/request/`, signUpForm)
   }
 
   login(loginData:any){
     return this.http
-    .post<any>(`${api}login/`, loginData)
+    .post<any>(`${api}api/login/`, loginData)
     .pipe(
       map((data:any)=>{
         this.tokenService.saveToken(data);

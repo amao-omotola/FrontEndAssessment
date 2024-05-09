@@ -1,0 +1,47 @@
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Profile Management</mat-card-title>
+      <!-- <mat-card-subtitle>Start</mat-card-subtitle> -->
+    </mat-card-header>
+    <mat-card-content>
+        <div class="body-container">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" >
+                <div class="image-container">
+                    <img src={{imagePath}}>
+                </div>
+                <div class="input-container">
+                    <div class="row">
+                        <div class="col-12 col-md-6">
+                            <mat-form-field class="example-form-field">
+                                <mat-icon matPrefix>mail</mat-icon>
+                                <mat-label>Email</mat-label>
+                                <input matInput type="text" formControlName="email">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <mat-form-field class="example-form-field">
+                                <mat-icon matPrefix>account_circle</mat-icon>
+                                <mat-label>First Name</mat-label>
+                                <input matInput type="text" formControlName="first_name">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <mat-form-field class="example-form-field">
+                                <mat-icon matPrefix>account_circle</mat-icon>
+                                <mat-label>Last Name</mat-label>
+                                <input matInput type="text" formControlName="last_name">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+                <mat-card-actions align="end" >
+                    <button mat-button>Update Profile
+                        <mat-spinner [diameter]="40"
+                      *ngIf="spinner"
+                  style="float: right; height: 10px; width: 10px"></mat-spinner>
+                    </button>
+                  </mat-card-actions>
+            </form>
+        </div>
+    </mat-card-content>
+</mat-card>

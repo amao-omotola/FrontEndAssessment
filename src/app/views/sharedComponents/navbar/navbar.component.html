@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg nav-container">
+    <!-- <div class="container"> -->
+      <div (click)="menuT()" mat-icon-button class="logo">
+        <img src="../assets/icon/logo.png" routerLink="/home">
+    </div>
+      <span class="spacer"></span>
+      <button class="navbar-toggler" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" [ngClass]="{ 'show': isNavbarCollapsed }">
+        <ul class="navbar-nav nav-items">
+          <li class="nav-item">
+            <button mat-button class="nav-button login-btn" routerLink="/login" (click)="clearToken()">
+              Login
+            </button>
+          </li>
+          <li class="nav-item">
+            <button mat-button class="nav-item nav-button signUp-btn"
+            routerLink="/signUp" (click)="clearToken()">
+            Sign up
+          </button>
+          </li>
+          
+        </ul>
+      </div>
+    <!-- </div> -->
+  </nav>
+  
